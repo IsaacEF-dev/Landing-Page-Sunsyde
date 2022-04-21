@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Fraunces', serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    width: 88%;
+    margin: 0 auto;
+}
+
+.section {
+    margin: 10rem auto 3rem auto;
+}
+
+.site-header {
+    background-image: url(images/desktop/image-header.jpg);
+    height: 100vh;
+    background-size: cover;
+    width: 100%;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.navegador a {
+    color: white;
+    text-decoration: none;
+    margin-right: 3rem;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.navegador a:last-of-type {
+    margin-right: 0;
+}
+
+.navegador .active {
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    font-size: 17px;
+    border-radius: 2rem;
+}
+
+.toggle {
+    display: none;
+}
+
+.movil-menu {
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    padding: 3.5rem 32.8%;
+    top: 119px;
+    z-index: 1;
+    display: none;
+}
+
+.navegador-movil {
+    display: flex;
+    flex-direction: column;
+}
+
+.movil-menu::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 0px solid transparent;
+    border-top: 50px solid transparent;
+    border-left: 30px solid transparent;
+    border-bottom: 30px solid rgb(255, 255, 255);
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+.movil-menu a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Barlow', sans-serif;
+    color: hsl(232, 10%, 55%);
+    margin-bottom: 3rem;
+}
+
+.movil-menu .active {
+    background-color: hsl(51, 100%, 49%);
+    padding: 1.2rem 2.1rem;
+    color: hsl(212, 27%, 19%);
+    border-radius: 2rem;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+}
+
+.movil-menu a:last-of-type {
+    margin-bottom: 0;
+}
+
+.head-content .title {
+    text-align: center;
+    font-size: 4.3rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .7rem;
+    margin-top: 6%;
+}
+
+.img-arrow {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-top: 8rem;
+    transform: translateX(-50%);
+}
+
+.card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-info div {
+    max-width: 57%;
+}
+
+.title-card {
+    font-size: 35px;
+    margin-bottom: 3rem;
+}
+
+.descripcion {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 2.5rem;
+    color: hsl(34, 4%, 67%);
+}
+
+.btn {
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 3.5rem;
+    display: inline-block;
+    color: hsl(44, 28%, 19%);
+}
+
+.btn::after {
+    content: '';
+    display: block;
+    height: 7px;
+    width: 100%;
+    background-color: hsl(44, 100%, 77%);
+    border-radius: 1rem;
+    margin-top: -6px;
+}
+
+.card-twos {
+    background-image: url(images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card-twos div {
+    max-width: 50%;
+    margin-bottom: 3rem;
+    color: hsl(167, 40%, 24%);
+    text-align: center;
+}
+
+.card-twos p {
+    font-size: 16px;
+    line-height: 2.5rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.card-two {
+    background-image: url(images/desktop/image-photography.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.card-two div {
+    position: absolute;
+    top: 65%;
+    max-width: 50%;
+    margin-bottom: 3rem;
+    color: hsl(198, 62%, 26%);
+    text-align: center;
+}
+
+.card-two p {
+    font-size: 16px;
+    line-height: 2.5rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.title-two {
+    font-size: 25px;
+    margin-bottom: 3rem;
+}
+
+
+/*Seccion de los testimoniales*/
+
+.container-testimoniales {
+    max-width: 1100px;
+    margin: 13rem auto;
+}
+
+.title-testi {
+    color: hsl(232, 10%, 55%);
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin-bottom: 7rem;
+}
+
+.testimoniales {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.testimonial {
+    flex-basis: calc(33.3% - 5.5rem);
+    text-align: center;
+}
+
+.user-image {
+    width: 62px;
+    border-radius: 50%;
+    margin-bottom: 5rem;
+}
+
+.opinion {
+    font-size: 16px;
+    color: hsl(232, 10%, 55%);
+    line-height: 2.9rem;
+    margin-bottom: 5rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.name-user {
+    font-size: 16px;
+    color: hsl(212, 27%, 19%);
+    margin-bottom: 1.2rem;
+}
+
+.cargo {
+    font-size: 12px;
+    color: hsl(232, 10%, 55%);
+    font-family: 'Barlow', sans-serif;
+}
+
+.banner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.site-footer {
+    background-color: hsl(168, 34%, 41%);
+    padding: 8rem 0;
+    color: hsl(167, 40%, 24%);
+    font-family: 'Barlow', sans-serif;
+}
+
+.title-footer {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.nav-footer {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 6rem;
+}
+
+.nav-footer a {
+    color: hsl(167, 40%, 24%);
+}
+
+.socials-media {
+    text-align: center;
+}
+
+.social {
+    margin-right: 2rem;
+}
+
+.social img {
+    width: 19px;
+}
+
+.social:last-of-type {
+    margin-right: 0;
+}
+
+@media(max-width:475px) {
+    .toggle {
+        display: block;
+        cursor: pointer;
+    }
+    .navegador {
+        display: none;
+    }
+    .active {
+        background-color: hsl(51, 100%, 49%);
+    }
+    .site-header {
+        background-image: url(images/mobile/image-header.jpg);
+        max-height: 60vh;
+    }
+    .card {
+        grid-template-columns: repeat(1, 1fr);
+        order: 0;
+    }
+    .uno {
+        order: 1;
+    }
+    .card-info div {
+        max-width: 73%;
+        padding: 6rem 0;
+        text-align: center;
+    }
+    .card-twos {
+        background-position: center;
+        height: auto;
+        width: 100%;
+        height: 450px;
+    }
+    .card-two {
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+    }
+    .col-50 div {
+        max-width: 80%;
+    }
+    .testimoniales {
+        flex-direction: column;
+    }
+    .testimonial {
+        margin-bottom: 6rem;
+    }
+    .testimonial:last-of-type {
+        margin-bottom: 0;
+    }
+    .user-image {
+        margin-bottom: 2.5rem;
+    }
+    .opinion {
+        max-width: 80%;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2.5rem;
+    }
+    .banner {
+        grid-template-columns: repeat(2, 2fr);
+    }
+    .nav-footer {
+        display: block;
+    }
+}
